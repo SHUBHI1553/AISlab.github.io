@@ -12,19 +12,28 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+    transform: scale(1.08);
+    transition: opacity 1.2s ease-in-out, transform 6s linear;
 }
+
 
 .hero-slide.active {
     opacity: 1;
+    transform: scale(1);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 20, 50, 0.25);
+    background: linear-gradient(
+        to right,
+        rgba(0, 20, 50, 0.85) 0%,
+        rgba(0, 20, 50, 0.65) 40%,
+        rgba(0, 20, 50, 0.25) 100%
+    );
     z-index: 1;
 }
+
 
 .hero-content {
     position: relative;
@@ -38,18 +47,26 @@
     justify-content: center;
     color: white;
 }
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    max-width: 800px;
+.hero-text-box {
+    background: rgba(0, 15, 40, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 14px;
+    max-width: 750px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
 }
 
+.hero-content h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+
 .hero-content p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-top: 20px;
-    max-width: 700px;
     opacity: 0.95;
 }
 
@@ -77,6 +94,7 @@ a {
 
 /* Navbar */
 .navbar {
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 0;
     width: 100%;
