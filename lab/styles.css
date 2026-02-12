@@ -1,5 +1,47 @@
-/* ===== HERO SECTION ===== */
+ /* ===== SPLIT HERO (Academic Premium) ===== */
 
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    height: 90vh;
+    min-height: 620px;
+    margin-top: 70px; /* push below navbar */
+}
+
+/* LEFT TEXT PANEL */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    background: #f8f9fb;
+}
+
+.hero-left h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #0a1f44;
+}
+
+.hero-left h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.hero-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* RIGHT SLIDESHOW */
+.hero-right {
+    position: relative;
+    overflow: hidden;
+}
 
 .hero-slide {
     position: absolute;
@@ -7,55 +49,12 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transform: scale(1.08);
-    transition: opacity 1.2s ease-in-out, transform 6s linear;
+    transition: opacity 1.2s ease-in-out;
 }
-
 
 .hero-slide.active {
     opacity: 1;
-    transform: scale(1);
 }
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
-}
-
-.hero {
-    position: relative;
-    height: min(85vh, 780px);
-    min-height: 520px;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* ===== INTRO SECTION (Title Below Slideshow) ===== */
-.intro {
-    background: #f3f3f3;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.intro-container {
-    max-width: 900px;
-    margin: auto;
-}
-
-.intro h1 {
-    font-size: 3.2rem;
-    color: #002b5c;
-    margin-bottom: 20px;
-    font-weight: 800;
-}
-
-.intro p {
-    font-size: 1.3rem;
-    color: #555;
-}
-
 
 /* Base styles */
 body {
@@ -85,7 +84,7 @@ a {
     top: 0;
     width: 100%;
     padding: 18px 0;
-    background: rgba(88, 28, 135, 0.9); /* IITM purple */
+    background: rgba(0, 40, 85, 0.85);
     backdrop-filter: blur(10px);
     z-index: 20;
 }
@@ -109,12 +108,12 @@ a {
 }
 
 .lab-name {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
     color: white;
     letter-spacing: 1px;
 }
-
 .nav-links {
     display: flex;
     list-style: none;
