@@ -1,61 +1,78 @@
- /* ===== SPLIT HERO (Academic Premium) ===== */
+/* =========================================
+   FULL WIDTH HERO SECTION (Modern Lab)
+========================================= */
 
-.hero-split {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    height: 90vh;
-    min-height: 620px;
-    margin-top: 70px; /* push below navbar */
-}
-
-/* LEFT TEXT PANEL */
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 80px;
-    background: #f8f9fb;
-}
-
-.hero-left h1 {
-    font-size: 4.2rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    color: #0a1f44;
-}
-
-.hero-left h2 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-.hero-left p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* RIGHT SLIDESHOW */
-.hero-right {
+.hero {
     position: relative;
+    height: 100vh;
+    width: 100%;
     overflow: hidden;
 }
 
+/* Slides */
 .hero-slide {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 1.5s ease-in-out, transform 6s linear;
+    transform: scale(1.08);
 }
 
 .hero-slide.active {
     opacity: 1;
+    transform: scale(1);
 }
 
+/* Gradient overlay to protect text */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(10, 20, 50, 0.9) 0%,
+        rgba(10, 20, 50, 0.75) 40%,
+        rgba(10, 20, 50, 0.4) 65%,
+        rgba(10, 20, 50, 0.1) 85%
+    );
+    z-index: 1;
+}
+
+/* Text content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+/* Gold underline accent */
+.hero-content h1::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 4px;
+    background: #ffd700;
+    margin-top: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin: 8px 0;
+    font-weight: 500;
+    opacity: 0.95;
+}
 /* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
