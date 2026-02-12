@@ -14,24 +14,32 @@
 
 <body>
 
-<!-- NAVBAR -->
   <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="home.html" class="active">Home</a></li>
-      <li><a href="research.html">Research Themes</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-    </ul>
+    <div class="nav-container">
+  
+      <!-- Left Side: IITM Logo + AIS Lab -->
+      <div class="nav-brand">
+        <img src="../files/iitm_logo.png" alt="IITM Logo" class="nav-logo">
+        <span class="lab-name">AIS Lab</span>
+      </div>
+  
+      <!-- Right Side Links -->
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+  
+    </div>
   </nav>
+
 
   <!-- HERO / LANDING SECTION -->
 <section class="hero">
 
-    <!-- IIT Madras Logo -->
-    <div class="hero-logo">
-        <img src="../files/iitm_logo.png" alt="IIT Madras">
-    </div>
+  
 
     <!-- Background Slides -->
     <div class="hero-slide active" style="background-image: url('../files/S1.png');"></div>
@@ -41,16 +49,18 @@
     <!-- Dark Overlay -->
     <div class="hero-overlay"></div>
 
-    <!-- Hero Text -->
     <div class="hero-content">
-        <div class="hero-text-box">
-            <h1>Algorithms for Imaging Sciences (AIS) Lab</h1>
-            <p>
-                Highly accurate, efficient, and deployable image and video enhancement algorithms
-            </p>
-            <a href="research.html" class="hero-btn">Explore Research →</a>
-        </div>
-    </div>
+      <div class="hero-text">
+          <h1>Algorithms for Imaging Sciences Lab</h1>
+          <p>
+              Highly accurate, efficient, and deployable image and video enhancement algorithms
+          </p>
+          <a href="research.html" class="hero-btn">Explore Research →</a>
+      </div>
+  </div>
+
+
+   
 
 </section>
 
