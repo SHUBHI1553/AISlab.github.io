@@ -3,6 +3,7 @@
 ========================================= */
 
 .hero {
+    margin-top: 80px;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -51,7 +52,7 @@
 }
 
 .hero-content h1 {
-    font-size: 4.8rem;
+    font-size: 4.2rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -97,7 +98,7 @@ a {
 
 /* Navbar */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     padding: 18px 0;
@@ -174,56 +175,61 @@ a {
 /* ===============================
    Research Grid Layout (FINAL)
 ================================= */
-
-.research-card {
-    position: relative;
-    background: linear-gradient(to bottom, #ffffff, #f6f9ff);
-    border-radius: 16px;
-    padding: 28px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    transition: all 0.35s ease;
-    text-align: center;
-    border: 1px solid rgba(0, 43, 92, 0.08);
+.research-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
 }
-
-/* Top accent line */
+.research-card {
+    position: relative;   /* ADD THIS */
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid #e6ecf5;
+    transition: all 0.3s ease;
+    text-align: center;
+}
 .research-card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, #002b5c, #ffd700);
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
 }
-
 .research-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    border-color: #002b5c;
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.12);
 }
 
 .card-image {
     width: 100%;
-    height: 180px;            /* fixed equal height */
-    overflow: hidden;         /* hide overflow */
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    height: 130px;   /* smaller */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 18px;
 }
+
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;        /* crop to fill */
-    object-position: center;  /* center crop */
+    object-fit: cover;
+    object-position: center;
     display: block;
+    transition: transform 0.4s ease;
 }
-
+.research-card:hover .card-image img {
+    transform: scale(1.05);
+}
 /* Text */
 .card-content h3 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 12px;
     color: #002b5c;
 }
@@ -436,14 +442,34 @@ a {
     color: #2c2c2c;
 }
 
-/* Publication Item Layout */
 .publication-item {
+    position: relative;   /* ADD THIS */
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: 30px;
     align-items: start;
-    padding: 30px 0;
-    border-bottom: 1px solid #ededed;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(145deg, #ffffff, #f5f9ff);
+    border: 1px solid #e3ebf7;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+.publication-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #002b5c, #ffd700);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.publication-item:hover {
+    border-color: #002b5c;
+    box-shadow: 0 12px 28px rgba(0, 43, 92, 0.10);
+    transform: translateY(-4px);
 }
 
 /* Image */
@@ -505,8 +531,8 @@ a {
 
 .mission-news {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 60px;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 70px;
     padding: 100px 10%;
     background: #f8f9fb;
 }
@@ -543,7 +569,7 @@ a {
 .announcement-box {
     background: linear-gradient(135deg, #002b5c, #004080);
     color: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
@@ -577,4 +603,54 @@ a {
     .research-cards {
         grid-template-columns: 1fr;
     }
+}
+.section-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #e4e9f2, transparent);
+    margin: 80px 0;
+}
+/* ==============================
+   RECENT PUBLICATIONS (Homepage)
+============================== */
+
+.recent-publications {
+    padding: 90px 10%;
+    background: #ffffff;
+}
+
+.recent-publications h2 {
+    font-size: 2.3rem;
+    color: #002b5c;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.recent-pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.recent-pub-item {
+    padding: 25px;
+    border: 1px solid #e6ecf5;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.recent-pub-item:hover {
+    border-color: #002b5c;
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.08);
+}
+
+.recent-pub-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #1f2a44;
+}
+
+.recent-pub-meta {
+    font-size: 0.95rem;
+    color: #666;
 }
