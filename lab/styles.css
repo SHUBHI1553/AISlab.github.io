@@ -175,33 +175,50 @@ a {
    Research Grid Layout (FINAL)
 ================================= */
 
-.research-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    margin-top: 50px;
+.research-card {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #f6f9ff);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    text-align: center;
+    border: 1px solid rgba(0, 43, 92, 0.08);
 }
 
-.research-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    text-align: center;
+/* Top accent line */
+.research-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #002b5c, #ffd700);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 .research-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* Image sizing */
+.card-image {
+    width: 100%;
+    height: 180px;            /* fixed equal height */
+    overflow: hidden;         /* hide overflow */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
 .card-image img {
     width: 100%;
-    height: 150px;   /* smaller */
-    object-fit: contain;  /* you already set this correctly */
-    margin-bottom: 18px;
+    height: 100%;
+    object-fit: cover;        /* crop to fill */
+    object-position: center;  /* center crop */
+    display: block;
 }
 
 /* Text */
@@ -210,7 +227,9 @@ a {
     margin-bottom: 12px;
     color: #002b5c;
 }
-
+.research-card:hover h3 {
+    color: #004080;
+}
 .card-content p {
     font-size: 0.9rem;
     color: #555;
