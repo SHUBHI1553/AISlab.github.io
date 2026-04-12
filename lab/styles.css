@@ -529,29 +529,45 @@ a {
     }
 }
 /* ==============================
-   MISSION + ANNOUNCEMENTS
+   MISSION (FULL WIDTH CARD STYLE)
 ============================== */
 
 .mission-news {
-    display: grid;
-    grid-template-columns: 2fr 1.2fr;
-    gap: 70px;
     padding: 100px 10%;
     background: #f8f9fb;
 }
 
+/* Mission container as card */
+.mission {
+    max-width: 1100px;
+    margin: auto;
+    background: #ffffff;
+    padding: 50px 60px;
+    border-radius: 14px;
+
+    /* Professional blue accent */
+    border-left: 6px solid #002b5c;
+
+    /* Soft elevation */
+    box-shadow: 0 10px 30px rgba(0, 43, 92, 0.08);
+}
+
+/* Heading */
 .mission h2 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: #002b5c;
     margin-bottom: 25px;
 }
 
+/* Paragraph */
 .mission p {
     margin-bottom: 20px;
-    line-height: 1.7;
-    font-size: 1.05rem;
+    line-height: 1.75;
+    font-size: 1.08rem;
+    color: #444;
 }
 
+/* Bullet points */
 .mission ul {
     margin-bottom: 20px;
     padding-left: 20px;
@@ -559,59 +575,29 @@ a {
 
 .mission ul li {
     margin-bottom: 10px;
+    font-size: 1.02rem;
 }
 
+/* Highlight line */
 .join-text {
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: 600;
     color: #b30000;
 }
 
-
-/* Modern Announcement Box */
-.announcement-box {
-    background: linear-gradient(135deg, #002b5c, #004080);
-    color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.announcement-box h3 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ffd700;
-    padding-bottom: 8px;
-}
-
-.announcement-box ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.announcement-box li {
-    margin-bottom: 14px;
-    font-size: 0.95rem;
-    position: relative;
-    padding-left: 18px;
-}
-
-.announcement-box li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ffd700;
-}
-@media (max-width: 900px) {
-    .research-cards {
-        grid-template-columns: 1fr;
-    }
-}
+/* Divider */
 .section-divider {
     height: 1px;
     width: 100%;
     background: linear-gradient(to right, transparent, #e4e9f2, transparent);
     margin: 80px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .mission {
+        padding: 30px 25px;
+    }
 }
 /* ==============================
    RECENT PUBLICATIONS (Homepage)
@@ -656,4 +642,50 @@ a {
 .recent-pub-meta {
     font-size: 0.95rem;
     color: #666;
+}
+/* ==============================
+   ANNOUNCEMENTS PAGE
+============================== */
+
+.announcements {
+    padding: 100px 10%;
+    background: #f8f9fb;
+}
+
+.announcements h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #002b5c;
+    font-size: 2.5rem;
+}
+
+.announcement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.announcement-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e6ecf5;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect (important for premium feel) */
+.announcement-item:hover {
+    transform: translateY(-5px);
+    border-color: #002b5c;
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.08);
+}
+
+.announcement-item h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.announcement-item p {
+    color: #444;
+    line-height: 1.6;
 }
