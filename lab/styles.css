@@ -122,7 +122,10 @@ a {
 }
 
 .nav-logo {
-    height: 45px;
+    width: 45px;        /* ADD THIS */
+    height: 45px;       /* keep */
+    object-fit: contain; /* IMPORTANT */
+    border-radius: 50%;  /* MAKES IT CIRCLE */
 }
 
 .lab-name {
