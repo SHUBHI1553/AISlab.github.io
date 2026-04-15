@@ -790,3 +790,34 @@ a {
     color: #444;
     line-height: 1.7;
 }
+/* ==============================
+   CONTACT SECTION (HOME PAGE)
+============================== */
+
+.contact-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+
+    /* subtle separation from above */
+    border-top: 1px solid #e6ecf5;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Heading */
+.contact-section h2 {
+    font-size: 2.2rem;
+    color: #002b5c;
+    margin-bottom: 25px;
+}
+
+/* Text */
+.contact-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+}
