@@ -7,47 +7,97 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1 class="lab-title">Algorithms for Imaging Sciences Lab (AIS Lab)</h1>
-      <p class="subtitle">Research Publications</p>
-    </div>
-  </header>
+ 
 
   <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
+    <div class="nav-container">
+  
+      <!-- Left Side: IITM Logo + AIS Lab -->
+      <div class="nav-brand">
+        <img src="../files/logo.png" alt="IITM Logo" class="nav-logo">
+        <span class="lab-name">AIS Lab</span>
+      </div>
+  
+      <!-- Right Side Links -->
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+      </ul>
+  
+    </div>
   </nav>
 
-  <main style="padding: 40px 20px; text-align: center;">
-    <section style="max-width: 900px; margin: auto; text-align: left;">
-    <section>
+<main class="publications-main">
+  <section class="publications-section">
 
-      <ul>
-        <li>
-          <strong>Softmax is 1/2-Lipschitz: A tight bound across all \ell_p norms</strong><br>
-          <em>Pravin Nair.</em>
-          <a href="https://arxiv.org/abs/2510.23012" target="_blank" rel="noopener noreferrer">[arXiv]</a>
-        </li>
-        <li>
-          <strong>Plug-and-Play Linear Attention for Pre-trained Image and Video Restoration Models</strong><br>
-          <em>Srinivasan Kidambi, and Pravin Nair.</em>
-          <a href="https://arxiv.org/abs/2506.08520" target="_blank" rel="noopener noreferrer">[arXiv]</a>
-        </li>
-        <li>
-          <strong>Detecting Localized Deepfake Manipulations Using Action Unit-Guided Video Representations.</strong><br>
-          <em>Tharun Anand, Siva Sankar, and Pravin Nair.</em><br>
-          <em>Proceedings of the Computer Vision and Pattern Recognition Conference Workshops. 2025.</em>
-          <a href="https://arxiv.org/abs/2503.22121" target="_blank" rel="noopener noreferrer">[arXiv]</a>
-        </li>
-      </ul>
-    </section>
-  </main>
+    <h2 class="section-title">Lab Publications</h2>
 
+    <!-- Publication 4 -->
+    <div class="publication-item">
+      <div class="publication-image">
+        <img src="../files/denoiser.png" alt="Denoiser Paper">
+      </div>
+      <div class="publication-content">
+        <h3>Provably Contractive and High-Quality Denoisers for Convergent Restoration</h3>
+        <p class="authors">Shubhi Shukla, Pravin Nair.</p>
+        <p class="venue">arXiv, 2026.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.26168" target="_blank" rel="noopener">[arXiv]</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Publication 1 -->
+    <div class="publication-item">
+      <div class="publication-image">
+        <img src="../files/softmax.png" alt="Softmax Paper">
+      </div>
+      <div class="publication-content">
+        <h3>Softmax is 1/2-Lipschitz: A tight bound across all ℓp norms</h3>
+        <p class="authors">Pravin Nair.</p>
+        <p class="venue">arXiv, 2025.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2510.23012" target="_blank" rel="noopener">[arXiv]</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="publication-item">
+      <div class="publication-image">
+        <img src="../files/attention.png" alt="Linear Attention Paper">
+      </div>
+      <div class="publication-content">
+        <h3>Plug-and-Play Linear Attention for Pre-trained Image and Video Restoration Models</h3>
+        <p class="authors">Srinivasan Kidambi, and Pravin Nair.</p>
+        <p class="venue">arXiv, 2025.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2506.08520" target="_blank" rel="noopener">[arXiv]</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publication 3 -->
+    <div class="publication-item">
+      <div class="publication-image">
+        <img src="../files/deepfake.png" alt="Deepfake Paper">
+      </div>
+      <div class="publication-content">
+        <h3>Detecting Localized Deepfake Manipulations Using Action Unit-Guided Video Representations</h3>
+        <p class="authors">Tharun Anand, Siva Sankar, and Pravin Nair.</p>
+        <p class="venue">CVPR Workshops, 2025.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2503.22121" target="_blank" rel="noopener">[arXiv]</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
   <footer class="footer">
     <p>&copy; 2025 Algorithms for Imaging Sciences Lab. All rights reserved.</p>
   </footer>

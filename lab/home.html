@@ -1,67 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algorithms for Imaging Sciences Lab</title>
-  <link rel="stylesheet" href="styles.css" />
- 
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
-  <header class="header">
-    <h1 class="lab-title">Algorithms for Imaging Sciences Lab (AIS Lab)</h1>
-    <p class="subtitle">Highly accurate, efficient, and deployable image and video enhancement algorithms</p>
-  </header>
 
   <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
+    <div class="nav-container">
+  
+      <!-- Left Side: IITM Logo + AIS Lab -->
+      <div class="nav-brand">
+        <img src="../files/logo.png" alt="IITM Logo" class="nav-logo">
+        <span class="lab-name">AIS Lab</span>
+      </div>
+  
+      <!-- Right Side Links -->
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main style="padding: 40px 20px; text-align: center;">
-    <section style="max-width: 1000px; margin: auto; text-align: left;">
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We develop state-of-the-art algorithms for image and video enhancement, restoration, and generative modeling. Our focus is on theoretical rigor, real-time efficiency, and practical deployability across a variety of imaging tasks.</p>
-    </section>
+<!-- FULL HERO SECTION -->
+<section class="hero">
 
-    <section id="research">
-      <h2>Research Areas</h2>
-      <div class="research-cards">
-        <div class="card">
-          <h3>Learning-based Iterative Algorithms</h3>
-          <p>Provably convergent and certifiable learning-based algorithms for restoration tasks.</p>
+  <!-- Slideshow Images -->
+  <div class="hero-slide active" style="background-image: url('../files/S2.png');"></div>
+  <div class="hero-slide" style="background-image: url('../files/S3.png');"></div>
+  <div class="hero-slide" style="background-image: url('../files/pub2.png');"></div>
+  <div class="hero-slide" style="background-image: url('../files/S5.png');"></div>
+
+  <!-- Dark Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Text Content -->
+  <div class="hero-content">
+    <h1>Algorithms for Imaging Sciences Lab</h1>
+    <p class="hero-subtitle">Department of Electrical Engineering</p>
+    <p class="hero-subtitle">Indian Institute of Technology Madras</p>
+  </div>
+
+</section>
+  
+  <!-- MAIN CONTENT -->
+  <main>
+    
+  
+  <!-- MISSION + ANNOUNCEMENTS -->
+  <section class="mission-news">
+  
+    <!-- LEFT: Mission (3/4 width) -->
+    <div class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        The AIS Lab develops state-of-the-art algorithms for image and video enhancement, restoration, and generative modeling. Our work is grounded in rigorous mathematical analysis and a deep understanding of modern state-of-the-art algorithms, enabling the design of theoretically grounded deep learning models. We focus on building methods with provable guarantees, ensuring stability, robustness, and interpretability in complex imaging tasks. 
+        
+        By integrating tools from optimization theory, signal processing, and applied mathematics, we aim to develop principled solutions to inverse problems. Our approach emphasizes both theoretical rigor and practical relevance, resulting in models that are efficient, scalable, and suitable for real-world deployment across diverse imaging applications.
+      </p>
+      
+      <ul>
+        <li>Provably convergent learning-based algorithms</li>
+        <li>Real-time image and video restoration systems</li>
+        <li>Theory-driven deep learning for inverse problems</li>
+      </ul>
+  
+      <p class="join-text">
+        We welcome motivated students interested in Computational Imaging,
+        Image Processing, and Algorithms.
+      </p>
+    </div>
+  
+  </section>
+  
+  <div class="section-divider"></div>
+  <!-- RESEARCH AREAS -->
+  <section id="research" class="content">
+    <h2>Research Areas</h2>
+  
+<div class="research-cards">
+
+  <div class="research-card">
+    <div class="card-image">
+      <img src="../files/iterative.png" alt="Iterative Algorithms">
+    </div>
+    <div class="card-content">
+      <h3>Learning-based Iterative Algorithms</h3>
+      <p>Provably convergent and certifiable learning-based algorithms for restoration tasks.</p>
+    </div>
+  </div>
+
+  <div class="research-card">
+    <div class="card-image">
+      <img src="../files/restoration.png" alt="Image Restoration">
+    </div>
+    <div class="card-content">
+      <h3>Real-time Image and Video Restoration</h3>
+      <p>Efficient state-of-the-art models deployable on edge devices.</p>
+    </div>
+  </div>
+
+      <div class="research-card">
+        <div class="card-image">
+          <img src="../files/video.png" alt="Video Stabilization">
         </div>
-        <div class="card">
-          <h3>Real-time Image and Video Restoration</h3>
-          <p>Efficient state-of-the-art models deployable on edge devices.</p>
-        </div>
-        <div class="card">
+        <div class="card-content">
           <h3>Video Stabilization</h3>
           <p>Motion-aware stabilization for high-motion and gyroscope-informed scenarios.</p>
         </div>
-        <div class="card">
+      </div>
+    
+      <div class="research-card">
+        <div class="card-image">
+          <img src="../files/deepfake.png" alt="Deepfake Detection">
+        </div>
+        <div class="card-content">
           <h3>Deepfake Video Detection</h3>
           <p>Robust detection methods generalizing to diffusion-based deepfakes.</p>
         </div>
-        <div class="card">
+      </div>
+    
+      <div class="research-card">
+        <div class="card-image">
+          <img src="../files/genreal.png" alt="Generative Models">
+        </div>
+        <div class="card-content">
           <h3>Generative Models</h3>
           <p>Developing text-to-image generative models for Indian content.</p>
         </div>
-        <div class="card">
+      </div>
+    
+      <div class="research-card">
+        <div class="card-image">
+          <img src="../files/gen.png" alt="Real-time Generative Models">
+        </div>
+        <div class="card-content">
           <h3>Real-time Generative Models</h3>
           <p>Develop mathematical models for real-time flow and diffusion models.</p>
         </div>
       </div>
-    </section>
-  </main>
+    
+    </div>
+  
+  </section>
 
+</main>
+
+
+
+
+
+  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Algorithms for Imaging Sciences Lab. All rights reserved.</p>
   </footer>
+
+  <!-- HERO SLIDESHOW SCRIPT -->
+  <script>
+    let slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
+
 </body>
 </html>
