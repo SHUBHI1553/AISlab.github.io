@@ -16,7 +16,7 @@
     background-size: contain;      /* FIX: no cropping */
     background-repeat: no-repeat;  /* FIX: no tiling */
     background-position: center;   /* keep centered */
-    background-color: #0a1f3c;     /* nice background fill */
+    background-color: #ffffff;    /* nice background fill */
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     transform: scale(1);           /* FIX: remove zoom */
